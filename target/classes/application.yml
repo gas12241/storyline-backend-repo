@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      uri : mongodb+srv://gas12241:Imawesome12241@cluster0.nxsjok0.mongodb.net/?retryWrites=true&w=majority
+      database : DBcs5500
+  graphql:
+    graphiql:
+      enabled : true
+      path : /graphiql

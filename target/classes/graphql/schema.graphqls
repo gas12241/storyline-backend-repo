@@ -1,0 +1,55 @@
+type Day {
+    dayId: ID
+    date: String
+    summary: [SummaryActivity]
+    segments: [StorySegment]
+    caloriesIdle: Int
+    lastUpdate: String
+}
+
+type Location {
+    lat: Float
+    lon: Float
+}
+
+type Place {
+    id: Int
+    name: String
+    type: String
+    location: Location
+}
+
+type SegmentActivity {
+    activity: String
+    group: String
+    manual: Boolean
+    startTime: String
+    endTime: String
+    duration: Int
+    distance: Int
+    steps: Int
+    calories: Int
+}
+
+type StorySegment {
+    type: String
+    startTime: String
+    endTime: String
+    place: Place
+    activities: [SegmentActivity]
+    lastUpdate: String
+}
+
+type SummaryActivity {
+    activity: String
+    group: String
+    duration: Int
+    distance: Int
+    steps: Int
+    calories: Int
+}
+
+type Query {
+    getAllDays:[Day]
+    findDayByDate(date: String):Day
+}
