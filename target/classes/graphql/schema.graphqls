@@ -1,3 +1,6 @@
+# This is the Schema for GraphQL types and queries. We weren't able
+# to figure out how to work this with the front end so we didn't end
+# up using it, but it is here for reference.
 type Day {
     dayId: ID
     date: String
